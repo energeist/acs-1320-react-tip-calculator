@@ -13,21 +13,17 @@ function TipForm(props) {
   return (
     <div className="wrapper">
       <form className="inputs">
-      <h2>Bill Subtotal:</h2>
+        <h2>Bill Subtotal:</h2>
         <input 
           type="text"
           value={subtotal}
           onChange={(e) => setSubtotal(e.target.value)}
         />
-          <h2>Tax %:</h2>
+        <h2>Tax %:</h2>
         <div className="Counter">
           <button 
             onClick={() => { 
-              if ((tax - 1) > 0) {
-                setTax(tax - 1)
-              } else {
-                setTax(0)
-              }
+              (tax - 1 ) > 0 ? setTax(tax - 1) : setTax(0)
             }}
           >-</button>
           <h2>{tax}%</h2>
@@ -40,12 +36,8 @@ function TipForm(props) {
         <h2>Tip %:</h2>
         <div className="Counter">
         <button 
-          onClick={() => { 
-            if ((tip - 1) > 0) {
-              setTip(tip - 1)
-            } else {
-              setTip(0)
-            }
+          onClick={() => {
+            (tip - 1 ) > 0 ? setTip(tip - 1) : setTip(0) 
           }}
         >-</button>
         <h2>{tip}%</h2>
@@ -57,21 +49,17 @@ function TipForm(props) {
         </div>
         <h2>Split between # of people:</h2>
         <div className="Counter">
-        <button 
-          onClick={() => { 
-            if ((split - 1) > 1) {
-              setSplit(split - 1)
-            } else {
-              setSplit(1)
-            }
-          }}
-        >-</button>
-        <h2>{split}</h2>
-        <button 
-            onClick={() => {
-              setSplit(split + 1)
+          <button 
+            onClick={() => { 
+              (split - 1) > 1 ? setSplit(split - 1) : setSplit(1) 
             }}
-        >+</button>
+          >-</button>
+          <h2>{split}</h2>
+          <button 
+              onClick={() => {
+                setSplit(split + 1)
+              }}
+          >+</button>
         </div>
       </form>
       <div className="outputs">
