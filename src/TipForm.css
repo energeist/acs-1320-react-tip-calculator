@@ -1,0 +1,59 @@
+.wrapper {
+	width: 800px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.inputs {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+}
+
+.outputs {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+input {
+	width: 100%;
+}
+
+.Counter {
+    display: flex;
+	height: 60px;
+	max-height: 60px;
+}
+  
+.Counter > h2 {
+	padding: 0.5em;
+	margin: 0;
+
+	border-top: 3px solid;
+	border-bottom: 3px solid;
+}
+
+.Counter > button {
+	font-size: 1em;
+	width: 50px;
+	margin: 0;
+	background-color: #eee;
+	border: none;
+	border-top: 3px solid;
+	border-bottom: 3px solid;
+}
+
+.Counter > button:first-child {
+	border-left: 3px solid;
+	border-top-left-radius: 1em;
+	border-bottom-left-radius: 1em;
+}
+
+.Counter > button:last-child {
+	border-right: 3px solid;
+	border-top-right-radius: 1em;
+	border-bottom-right-radius: 1em;
+}
