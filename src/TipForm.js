@@ -12,7 +12,7 @@ function TipForm(props) {
   let perPerson = (billTotal/parseFloat(split));
   return (
     <div className="wrapper">
-      <form className="inputs">
+      <form className="inputs" onSubmit={evt => evt.preventDefault()}>
         <h2>Bill Subtotal:</h2>
         <input 
           type="text"
